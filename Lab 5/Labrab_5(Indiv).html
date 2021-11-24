@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Паліндром</title>
+    <script language = "JavaScript">
+        var num,
+        check;
+        num = window.prompt("Уведіть число для перевірки ", "0");
+        // додавання запису введеного користувачем
+        palidrom = num.split("")
+        if (palidrom.length != 5) {
+            alert("Число не п'ятизначне! Спробуйте ще раз.");
+            location.reload();
+        }
+        else {
+            var strLen = palidrom.length;
+            var result = '';
+            for ( var i = 0; i < strLen; i++){
+                if (palidrom[i] === palidrom[strLen-1-i]) {
+                   check = true; 
+                }
+                else {
+                    check = false;
+                }
+            }
+        }
+        if (check === true) {
+            document.writeln('Число паліндром.');
+        }
+        else {
+            document.writeln('Число не паліндром.');
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
